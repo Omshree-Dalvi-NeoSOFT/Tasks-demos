@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 2</title>
+    <script>
+        var num1 = parseInt(prompt("Enter Number :-"))
+        var n = num1;
+        var rev=0;
+        var r = 0;
+        var sum=0;
+        while(num1!=0){
+            r=num1%10;
+            sum=sum+r;
+            rev=rev*10+r;
+            num1=parseInt(num1/10)
+        }
+        document.write("<br>Num :"+n)
+        document.write("<br>Rev :"+rev)
+        document.write("<br>Num :"+sum)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

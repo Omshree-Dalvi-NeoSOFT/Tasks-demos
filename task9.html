@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Create Element</title>
+</head>
+<body>
+    <h2>Create List</h2>
+    <ul id="list">
+        <li>Home</li>
+    </ul>
+    <script>
+        var list=document.getElementById('list');
+        var li = document.createElement('li')
+        li.textContent='About US'
+        list.appendChild(li)
+ 
+        var li1 = document.createElement('li')
+        li1.textContent='Services'
+        list.appendChild(li1)
+
+        var li2 = document.createElement('li')
+        li2.textContent='Contact US'
+        list.appendChild(li2)
+    </script>
+</body>
+</html>

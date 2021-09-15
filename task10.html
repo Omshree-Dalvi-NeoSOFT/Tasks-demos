@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grading</title>
+    <script>
+        function grade(){
+            var s1 = Number(document.getElementById('s1').value);
+            var s2 = Number(document.getElementById('s2').value);
+            var s3 = Number(document.getElementById('s3').value);
+            var s4 = Number(document.getElementById('s4').value);
+            var s5 = Number(document.getElementById('s5').value);
+
+            var total = s1 + s2 + s3 + s4 + s5;
+
+            document.getElementById('total').value=total;
+
+            var percentage = (total * 100) / 500;
+
+            document.getElementById('percent').value=percentage+"%";
+
+            if (percentage > 80) {
+                document.getElementById('grade').value='A';
+            }
+            else if (percentage > 60 && percentage <= 80) {
+                document.getElementById('grade').value='B';
+            }
+            else if (percentage > 45 && percentage <= 60) {
+                document.getElementById('grade').value='C';
+            }
+            else {
+                document.getElementById('grade').value='Fail';
+            }
+        }
+        
+    </script>
+
+</head>
+<body>
+    <h2>Marksheet</h2>
+    English : <input type="text" id="s1"><br>
+    Hindi : <input type="text" id="s2"><br>
+    Maths : <input type="text" id="s3"><br>
+    Science : <input type="text" id="s4"><br>
+    SST : <input type="text" id="s5"><br><br><hr>
+    <button onclick="grade()">Calculate</button><br>
+    Total : <input type="text" id="total"><br>
+    Percentage : <input type="text" id="percent"><br>
+    Grade : <input type="text" id="grade"><br>
+    
+</body>
+</html>

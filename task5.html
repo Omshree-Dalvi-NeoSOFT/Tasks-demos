@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task 5</title>
+    <script>
+        function pyrM(){
+            var val = parseInt(prompt("Enter a Number :-"))
+            for(i=1;i<=val;++i){
+                for(k=1;k<=(val-i);k++){
+                    document.write("&nbsp;&nbsp;")
+                }
+                for(j=1;j<=i;++j){
+                    document.write("*&nbsp;&nbsp;");
+                }
+                document.write("<br>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Click Me" onclick="pyrM()"/>
+</body>
+</html>

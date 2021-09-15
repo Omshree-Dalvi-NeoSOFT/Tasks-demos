@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Grade Evaluation</title>
+    <script>
+        function gradeFunction(){
+            var s1 = parseInt(prompt("Enter English Marks :"));
+            var s2 = parseInt(prompt("Enter Maths Marks :"));
+            var s3 = parseInt(prompt("Enter Science Marks :"));
+            var s4 = parseInt(prompt("Enter SST Marks :"));
+            var s5 = parseInt(prompt("Enter Computer Marks :"));
+
+            var total = s1 + s2 + s3 + s4 + s5;
+            var percentage = (total * 100) / 500;
+            document.write("MarkSheet :-");
+            document.write("<br>");
+            document.write("English :-" + s1);
+            document.write("<br>");
+            document.write("Maths :-" + s2);
+            document.write("<br>");
+            document.write("Science :-" + s3);
+            document.write("<br>");
+            document.write("SST :-" + s4);
+            document.write("<br>");
+            document.write("Computer :-" + s5);
+            document.write("<br>");
+            document.write("Total :-" + total);
+            document.write("<br>");
+            document.write("Percentage :-" + percentage + "%");
+            document.write("<br>");
+            if (percentage > 80) {
+                document.write("Grade :-" + "A");
+            }
+            else if (percentage > 60 && percentage <= 80) {
+                document.write("Grade :-" + "B");
+            }
+            else if (percentage > 45 && percentage <= 60) {
+                document.write("Grade :-" + "C");
+            }
+            else {
+                document.write("Grade :-" + "Fail");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Click for Grading" onclick="gradeFunction()" />
+</body>
+
+</html>

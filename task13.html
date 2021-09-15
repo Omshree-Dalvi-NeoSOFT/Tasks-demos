@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dynamic UL</title>
+    <script>
+        var arr = [];
+        function add(){
+            var task = document.getElementById('text').value;
+            arr.push(task);
+            var list=document.getElementById('task');
+            var li = document.createElement('li');
+            li.id='li'
+            arr.forEach(function(val,ind){
+                li.innerHTML=val+'<button onclick="removefn()">Remove Task</button>';
+                list.appendChild(li);
+            })
+            task = document.getElementById('text').value=''
+        }
+        function removefn(){
+            var task = document.getElementById('task');
+            var li = document.getElementById('li')
+            task.removeChild(li)
+        }
+    </script>
+</head>
+<body>
+    <h2>To do List : -</h2>
+    Task : -<input type="text" id="text">&nbsp;<button onclick="add()">Add Task</button> 
+    <ul id="task">
+
+    </ul>
+</body>
+</html>

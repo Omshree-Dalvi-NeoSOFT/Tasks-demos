@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM Manipulation</title>
+    <script>
+        function read(){
+            var doc = document.getElementById("para");
+            alert(doc.innerText)
+        }
+        function Update(){
+            var doc1 = document.getElementById("para");
+            doc1.innerHTML="I am fine !"
+            doc1.style.color="red";
+            doc1.style.border="2px solid black";
+            doc1.style.textAlign="center";
+            doc1.style.fontSize="50px";
+        }
+    </script>
+</head>
+<body>
+    <h1>DOM Manipulation</h1>
+    <p id="para">Hello How r u</p>
+    <button onclick="read()">Read Data</button>
+    <button onclick="Update()">Update Data</button>
+</body>
+</html>

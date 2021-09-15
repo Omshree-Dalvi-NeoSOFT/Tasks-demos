@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Validation</title>
+</head>
+<body>
+    Name : - <input type="text" id="name"><br>
+    Mobile : -<input type="text" id="mob" onchange="validFun()"><br>
+
+    <button id="check" onclick="submit()">Check</button>
+
+    <script>
+        document.getElementById('check').disabled = true;
+        function validFun(){
+            var name = document.getElementById('name').value;
+            var mobile = document.getElementById('mob').value;
+            var regname=/^[a-zA-Z ]{2,100}$/;
+            var regmob=/^[6-9][0-9]{9}$/;
+            if(!(regname.test(name)) ){
+                alert("Only Alphabets required !")
+                document.getElementById('name').focus();
+                return false;
+            }
+            else if(!(regmob.test(mobile))){
+                alert("Only Numbers Allowed !")
+                document.getElementById('mob').focus();
+                return false;
+            }
+            else{
+                document.getElementById('check').disabled = false;
+                // alert("form submitted !")
+            }
+            
+        }
+
+        function submit(){
+            var name = document.getElementById("name").value
+            var mob = document.getElementById('mob').value
+            alert("Name :- "+name)
+            alert("Mobile Number :-"+mob);
+            alert("form submitted !");
+        }
+    </script>
+        
+</body>
+</html>
